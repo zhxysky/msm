@@ -1,5 +1,13 @@
+*.class
 .classpath
-.classes
 .project
 .settings/*
+
+# Package Files #
+*.jar 
+*.war 
+*.ear 
+
+
+#maven files#
 target/*
