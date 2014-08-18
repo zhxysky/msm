@@ -8,6 +8,10 @@
 <title>user list</title>
 </head>
 <body>
-	${msg}
+	${msg}<br>
+	
+	<c:forEach var="user" items="${userList }">
+		${user.id } : ${user.name } <br>
+	</c:forEach>
 </body>
 </html>
