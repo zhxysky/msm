@@ -33,6 +33,10 @@ public class IndexAction {
 		List<User> userList = userDao.getUserList();
 		model.addAttribute("userList", userList);
 		model.addAttribute("msg", "success");
+		System.out.println("123");
 		return "userlist";
 	}
+	
+	
+	
 }
