@@ -12,3 +12,6 @@
 #maven files#
 target/*
 a/target/*
+
+
+target/m2e-wtp/web-resources/META-INF/maven/com.zhxy/msm/pom.properties
