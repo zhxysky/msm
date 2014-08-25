@@ -34,7 +34,6 @@ public class IndexAction {
 		userService.getUserById(1);
 		model.addAttribute("userList", userList);
 		model.addAttribute("msg", "success");
-		System.out.println("123");
 		return "userlist";
 	}
 	
