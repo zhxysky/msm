@@ -10,7 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.zhxy.bean.User;
-import com.zhxy.dao.UserDao;
+import com.zhxy.service.UserService;
 
 @Controller
 public class IndexAction {
@@ -18,7 +18,7 @@ public class IndexAction {
 	Logger logger = LoggerFactory.getLogger(IndexAction.class);
 	
 	@Autowired
-	private UserDao userDao;
+	private UserService userService;
 	
 	@RequestMapping("/hello.do")
 	public String hello() {
@@ -30,7 +30,8 @@ public class IndexAction {
 	
 	@RequestMapping("/userList.do")
 	public String userList(ModelMap model) {
-		List<User> userList = userDao.getUserList();
+		List<User> userList = userService.getUserList();
+		userService.getUserById(1);
 		model.addAttribute("userList", userList);
 		model.addAttribute("msg", "success");
 		return "userlist";

@@ -6,11 +6,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd  
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+       >
 
-	<!-- spring bean config. -->
-	
-	
 	<context:property-placeholder location="classpath:/jdbc.properties" />
 	
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
