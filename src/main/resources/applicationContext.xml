@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
@@ -11,17 +12,26 @@
 
 	<context:property-placeholder location="classpath:/jdbc.properties" />
 	
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClass" value="${dataSource.driverClassName}" />
-		<property name="jdbcUrl" value="${dataSource.jdbcUrl}" />
-		<property name="user" value="${dataSource.username}" />
-		<property name="password" value="${dataSource.password}" />
-		<property name="initialPoolSize" value="${dataSource.initialPoolSize}" />
-		<property name="minPoolSize" value="${dataSource.minPoolSize}" />
-		<property name="maxPoolSize" value="${dataSource.maxPoolSize}" />
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
+		p:driverClass="${dataSource.driverClassName}" 
+		p:jdbcUrl="${dataSource.jdbcUrl}" 
+		p:user="${dataSource.username}"
+		p:password="${dataSource.password}"
+		p:initialPoolSize="${dataSource.initialPoolSize}"
+		p:minPoolSize="${dataSource.minPoolSize}"
+		p:maxPoolSize="${dataSource.maxPoolSize}"
+		p:checkoutTimeout="${dataSource.checkoutTimeout}"
+		/>
+<!-- 		<property name="driverClass" value="${dataSource.driverClassName}" /> -->
+<!-- 		<property name="jdbcUrl" value="${dataSource.jdbcUrl}" /> -->
+<!-- 		<property name="user" value="${dataSource.username}" /> -->
+<!-- 		<property name="password" value="${dataSource.password}" /> -->
+<!-- 		<property name="initialPoolSize" value="${dataSource.initialPoolSize}" /> -->
+<!-- 		<property name="minPoolSize" value="${dataSource.minPoolSize}" /> -->
+<!-- 		<property name="maxPoolSize" value="${dataSource.maxPoolSize}" /> -->
 		<!-- 当连接池用完时客户端调用getConnection()后等待获取新连接的时间，超时后将抛出  SQLException,如设为0则无限期等待。单位毫秒。Default: 0 -->
-		<property name="checkoutTimeout" value="${dataSource.checkoutTimeout}" />
-	</bean>
+<!-- 		<property name="checkoutTimeout" value="${dataSource.checkoutTimeout}" /> -->
+<!-- 	</bean> -->
 	
 	
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
