@@ -36,4 +36,15 @@ public class UserDaoImpl implements UserDao {
 		return user;
 	}
 
+	@Override
+	public User getUserById(int userId) {
+		String sql = "select * from tb_user where id=?";
+		return this.jdbcTemplate.queryForObject(sql, new Object[]{userId}, new RowMapper<User>() {
+			@Override
+			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+				return rsToObj(rs);
+			}
+		});
+	}
+
 }
