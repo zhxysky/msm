@@ -1,5 +1,8 @@
 package com.zhxy.bean;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class User {
 
 	private int id;
