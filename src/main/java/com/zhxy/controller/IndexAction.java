@@ -28,6 +28,7 @@ public class IndexAction {
 		logger.info("hello info.");
 		System.out.println("br2..");
 		System.out.println("br1..");
+		System.out.println("br");
 		return "hello "+name;
 	}
 	
