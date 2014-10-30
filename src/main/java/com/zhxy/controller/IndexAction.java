@@ -27,11 +27,8 @@ public class IndexAction {
 		System.out.println("hello "+name);
 		logger.info("hello info.");
 		System.out.println("br2..");
-<<<<<<< HEAD
 		System.out.println("br1..");
 		System.out.println("br");
-=======
->>>>>>> parent of 2c6d59b... Merge branch 'br1' into br2
 		return "hello "+name;
 	}
 	
