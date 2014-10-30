@@ -26,6 +26,7 @@ public class IndexAction {
 	public @ResponseBody String hello(@PathVariable String name) {
 		System.out.println("hello "+name);
 		logger.info("hello info.");
+		System.out.println("br2..");
 		return "hello "+name;
 	}
 	
