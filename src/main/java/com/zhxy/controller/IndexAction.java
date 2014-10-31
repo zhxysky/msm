@@ -30,6 +30,7 @@ public class IndexAction {
 		System.out.println("br1..");
 		System.out.println("br");
 		System.out.println("rebase 1.");
+		System.out.println("rebase 2");
 		return "hello "+name;
 	}
 	
