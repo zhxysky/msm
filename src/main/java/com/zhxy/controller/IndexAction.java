@@ -26,14 +26,6 @@ public class IndexAction {
 	public @ResponseBody String hello(@PathVariable String name) {
 		System.out.println("hello "+name);
 		logger.info("hello info.");
-		System.out.println("br2..");
-		System.out.println("br1..");
-		System.out.println("br");
-		System.out.println("rebase 1.");
-		System.out.println("rebase 2");
-		System.out.println("merge 2");
-		System.out.println("merge 1");
-		System.out.println("fetch 1");
 		return "hello "+name;
 	}
 	
