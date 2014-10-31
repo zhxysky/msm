@@ -33,6 +33,7 @@ public class IndexAction {
 		System.out.println("rebase 2");
 		System.out.println("merge 2");
 		System.out.println("merge 1");
+		System.out.println("fetch 1");
 		return "hello "+name;
 	}
 	
